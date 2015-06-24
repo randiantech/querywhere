@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6652882-7f64-4625-bbc9-8765d0dab56c" name="Default" comment="added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ojdbc14.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="c6652882-7f64-4625-bbc9-8765d0dab56c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="querywhere.iws" />
@@ -419,7 +417,7 @@
       <created>1435175730348</created>
       <option name="number" value="Default" />
       <updated>1435175730348</updated>
-      <workItem from="1435175732988" duration="1201000" />
+      <workItem from="1435175732988" duration="1252000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1435175758349</created>
@@ -433,11 +431,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435176078478</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated gitignore | added required oracle library">
+      <created>1435176978501</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1435176978501</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1201000" />
+    <option name="totallyTimeSpent" value="1252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1600" y="27" width="1366" height="741" extended-state="6" />
@@ -475,7 +479,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="testtest" />
-    <option name="LAST_COMMIT_MESSAGE" value="testtest" />
+    <MESSAGE value="updated gitignore | added required oracle library" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore | added required oracle library" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
