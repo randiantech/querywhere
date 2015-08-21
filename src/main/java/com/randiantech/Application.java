@@ -12,19 +12,21 @@ import java.util.Map;
 /**
  * @author Juan Carlos Cancela <juan.cancela@randiantech.com>
  */
-public class Application
-{
+public class Application {
 
     /* Error Message Builder */
     private static ErrorMessageBuilder errorMessageBuilder = new ErrorMessageBuilder();
     
     /* Connections Map */
-    private static Map<String, Connection> connections = new HashMap<String, Connection>();
+    private static Map<DatabaseType, Connection> connections = new HashMap<DatabaseType, Connection>();
 
 
-    private void startHttpServer(String providedPort) throws Exception
-    {
-        Integer applicationPort = HttpServerConfiguration.getApplicationPort(providedPort);
+    /**
+     * Starts HTTP Server
+     * @throws Exception
+     */
+    private void startHttpServer() throws Exception {
+        Integer applicationPort = HttpServerConfiguration.getApplicationPort(null);
         Server server = new Server(applicationPort);
         WebAppContext root = new WebAppContext();
         root.setContextPath(HttpServerConfiguration.getContextPath());
@@ -36,27 +38,23 @@ public class Application
         server.join();
     }
 
-    private void registerDatabaseConnections(String databaseType){
-            //connections.put(DatabaseType.valueOf(databaseType), DatabaseType.valueOf(databaseType).getConnection(null));
+    private void registerDatabaseConnections(DatabaseType databaseType) throws Exception {
+        connections.put(databaseType, databaseType.getConnection(null));
     }
 
-    public void start(String providedPort) throws Exception{
-        //registerDatabaseConnections(databaseType);
-        startHttpServer(providedPort);
+    public void start() throws Exception {
+        startHttpServer();
     }
 
-    public static ErrorMessageBuilder getErrorMessageBuilder()
-    {
+    public static ErrorMessageBuilder getErrorMessageBuilder() {
         return errorMessageBuilder;
     }
 
-    public static void setErrorMessageBuilder(ErrorMessageBuilder errorMessageBuilder)
-    {
+    public static void setErrorMessageBuilder(ErrorMessageBuilder errorMessageBuilder) {
         Application.errorMessageBuilder = errorMessageBuilder;
     }
 
-    public static Map<String, Connection> getConnections()
-    {
+    public static Map<DatabaseType, Connection> getConnections() {
         return connections;
     }
 }

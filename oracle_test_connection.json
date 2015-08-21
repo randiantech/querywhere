@@ -1,0 +1,9 @@
+{
+  "properties":[
+    {"key":"USERNAME", "value":"demouser"},
+    {"key":"PASSWORD", "value":"XXX"},
+    {"key":"HOST", "value":"XXX"},
+    {"key":"PORT", "value":"1521"},
+    {"key":"SERVICENAME", "value":"ORCL"}
+  ]
+}

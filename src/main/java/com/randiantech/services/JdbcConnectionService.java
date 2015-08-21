@@ -24,7 +24,7 @@ public class JdbcConnectionService
         {
             TupleList propertyList = new ObjectMapper().readValue(connectionObject, TupleList.class);
             Connection connection = DatabaseType.valueOf(databaseName).getConnection(propertyList.toMap());
-            Application.getConnections().put(databaseName, connection);
+            Application.getConnections().put(DatabaseType.valueOf(databaseName), connection);
         }
         catch (Exception e)
         {

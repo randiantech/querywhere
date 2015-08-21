@@ -14,7 +14,6 @@ public class Start
     public static void main(String[] args) throws Exception
     {
         Application app = new Application();
-        String providedPort = args[0];
-        app.start(providedPort);
+        app.start();
     }
 }

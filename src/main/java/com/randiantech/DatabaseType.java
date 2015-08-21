@@ -15,7 +15,7 @@ public enum DatabaseType
 {
 
     /**
-     * DB2
+     * ORACLE_10
      */
     ORACLE_10(1)
             {
